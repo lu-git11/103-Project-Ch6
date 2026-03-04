@@ -20,6 +20,7 @@ for (student, grades) in studentGrades {
         Student: \(student)
         Grades: \(grades)
         Average: \(avgFormat)
+        
         """)
 }
 
