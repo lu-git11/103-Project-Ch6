@@ -9,12 +9,14 @@ var studentGrades: [String: [Double]] = [
     "Joe": [65.22, 60.00, 40.00]
 ]
 
+print("Student Record Summary:")
+
 for (student, grades) in studentGrades {
     let sum = grades.reduce(0, +)
     let average = sum / Double(grades.count)
     let avgFormat = String(format: "%.2f", average)
+    
     print("""
-        Student Record Summary:
         Student: \(student)
         Grades: \(grades)
         Average: \(avgFormat)
