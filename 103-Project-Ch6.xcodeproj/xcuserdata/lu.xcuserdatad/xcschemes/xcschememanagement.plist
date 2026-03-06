@@ -9,6 +9,21 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Assign 1 (Playground).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>CollectionMethods (Playground).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>Collections (Playground).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 </dict>
 </plist>

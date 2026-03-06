@@ -5,7 +5,7 @@ var studentGrades: [String: [Double]] = [
     "Jon": [80.11, 77.23, 92.44],
     "Jim": [72.33, 34.44, 43.55],
     "Jack": [45.34, 55.34, 65.72],
-    "Jeff": [99.78, 77.32, 83.23],
+    "Jeff": [99.78, 89.32, 92.23],
     "Joe": [65.22, 60.00, 40.00]
 ]
 
@@ -32,5 +32,5 @@ if let (student, avg) = (
         .max(by: { $0.value < $1.value })
     ) {
     let formatted = String(format: "%.2f", avg)
-        print("Highest average: \(student) with \(formatted)")
+        print("Student with the Highest average: \(student) with \(formatted)")
     }
