@@ -32,35 +32,20 @@ struct StudentView: View {
                 VStack(spacing: 8){
                     Text("Student Grades")
                         .font(.largeTitle)
-                        .fontWeight(.semibold)
+                        .fontWeight(.medium)
                         .foregroundStyle(.blue)
                         .padding()
                     
                     Text("Average Grade: \(averageGrades)")
                         .foregroundStyle(.secondary)
                         .fontWeight(.bold)
+
                     List(sortedStudents, id: \.key){ student in
                         Text("\(student.key)  -  \(student.value)")
                     }
                     .listStyle(.plain)
-                    .scrollContentBackground(.hidden)
-                    .background(Color.clear)
                     .frame(minHeight: 140)
-                    
-                    .navigationTitle("GradeBook")
-                    .navigationBarTitleDisplayMode(.inline)
-                    
-                    .toolbar{
-                        Button{
-                            sortAscending.toggle()
-                        } label:{
-                            Image(systemName: "arrow.up.arrow.down.circle")
-                                .foregroundStyle(.blue)
-                        }//label
-                    }//toolbar
-                    .toolbarBackground(.visible, for: .navigationBar)
-                    .toolbarBackground(Color.gray.opacity(0.12), for: .navigationBar)
-                    
+                            
                     HStack(spacing: 12) {
                         TextField("Student Name", text: $newStudent)
                             .font(.callout)
@@ -89,29 +74,39 @@ struct StudentView: View {
                                 newGrade = ""
                             }
                         } label: {
-                            Image(systemName: "plus")
+                            Image(systemName: "plus.circle.fill")
+                                
                                 .font(.system(size: 18, weight: .bold))
                                 .foregroundStyle(.white)
-                                .frame(width: 40, height: 40)
+                                .frame(width: 50, height: 50)
                                 .background(Circle().fill(Color.blue))
                                 .shadow(color: .black.opacity(0.15), radius: 4, x: 0, y: 2)
                         }//label
-                        .padding(20)
+                        .padding(.vertical, 20)
                     }//Hstack
                     .padding(.horizontal, 16)
                     .padding(.top, 8)
                 }//vstack1
-                .background(Color.clear)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 16, style: .continuous)
-                        .stroke(Color.secondary.opacity(0.2), lineWidth: 1)// subtle gray border
-                )
-                .shadow(color: .black.opacity(0.06), radius: 0, x: 0, y: 0) // optional soft shadow
-                .padding(.horizontal, 16)
+                .navigationTitle("GradeBook")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar{
+                    Button{
+                        sortAscending.toggle()
+                    } label:{
+                        Image(systemName: "arrow.up.arrow.down.circle")
+                            .foregroundStyle(.blue)
+                            .font(.system(size: 20, weight: .semibold))
+                            .padding(0)
+                    }//label
+                }//toolbar
+                .toolbarBackground(.hidden, for: .navigationBar)
+                .background(Color.white)
+                .cornerRadius(16)
+                .padding(.horizontal, 26)
                 .padding(.top, 8)
+                .background(Color.gray.opacity(0.15))
             }//navigation
-            .ignoresSafeArea()
-            .background(Color.black)
+            .background(Color.gray.opacity(0.15))
     }//body
 }//view
 
