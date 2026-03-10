@@ -1,4 +1,3 @@
-import UIKit
 
 class Student {
     var name: String
@@ -35,14 +34,12 @@ for student in students {
     let status = student.isPassing() ? "Passing" : "Failing"
     courseTotal += avg
     
-    
     print("""
         Student: \(student.name)
         Average: \(String(format: "%.2f", avg))
         Status: \(status)
         
         """)
-    
 }
 
 let courseAverage = courseTotal / Double(students.count)

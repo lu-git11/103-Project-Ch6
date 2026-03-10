@@ -105,6 +105,7 @@ struct StudentView: View {
                 .padding(.horizontal, 26)
                 .padding(.top, 8)
                 .background(Color.gray.opacity(0.15))
+                
             }//navigation
             .background(Color.gray.opacity(0.15))
     }//body

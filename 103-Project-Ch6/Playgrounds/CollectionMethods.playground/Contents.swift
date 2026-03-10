@@ -1,4 +1,4 @@
-import UIKit
+
 
 // 1. create/initialize
 var fruitsArray: [String] = ["apple", "orange", "banana"]

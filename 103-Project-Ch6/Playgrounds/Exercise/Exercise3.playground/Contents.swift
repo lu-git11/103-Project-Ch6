@@ -1,4 +1,3 @@
-import UIKit
 
 class Dog {
     var name: String
